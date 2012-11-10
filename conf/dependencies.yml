@@ -1,0 +1,13 @@
+# Application dependencies
+
+require:
+    - play
+    - local -> ognomplay 0.1
+
+# Modules in the same directory as the application.
+repositories:
+   - Custom_Modules:
+      type: local
+      artifact: ${application.path}/../[module]
+      contains:
+         - local -> *
