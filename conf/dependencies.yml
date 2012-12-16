@@ -1,13 +1,12 @@
 # Application dependencies
-
 require:
     - play
-    - local -> ognomplay 0.1
+    - takenami -> ognomplay 0.1
 
-# Modules in the same directory as the application.
+# My custom repositories
 repositories:
-   - Custom_Modules:
-      type: local
-      artifact: ${application.path}/../[module]
-      contains:
-         - local -> *
+    - takenami:
+        type:       http
+        artifact:   "https://github.com/itakenami/ognomplay/raw/master/dist/[module]-[revision].zip"
+        contains:
+            - takenami -> *
